@@ -1,0 +1,191 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.banner{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    border-radius: 10px;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+    
+}
+
+.banner h1{
+    z-index: 1;
+    color: var(--color-1);
+    font-size: 4vw;
+    padding: 5px;
+}
+
+.banner a{
+    z-index: 2;
+    border: 1px solid var(--color-1);
+    background-color: transparent;
+    border-radius: 5px;
+    color: var(--color-1);
+    text-decoration: none;
+    font-size: 1.5vw;
+    padding: .5vw 2vw;
+}
+
+.banner a:hover{
+    background-color: var(--color-4);
+    color: var(--color-3);
+}
+
+.filterbar{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 5px 0px;
+    display: flex;
+    /* background-color: var(--color-4); */
+}
+
+
+.filterbar button{
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--color-3);
+    border-radius: 20px;
+}
+
+.filterbar .active{
+    background-color: var(--color-1);
+    color: white;
+}
+
+.blogs{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.blogs .blog{
+    aspect-ratio: 4/3;
+    border: 1px solid var(--color-3);
+    border-radius: 10px;
+    margin: 10px 5px;
+    flex-basis: calc(33% - 10px);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.blog img{
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 18/9;
+}
+
+.blog h3{
+    margin: 10px;
+    font-size: 1.3vw;
+}
+
+.blog span{
+    position: absolute;
+    color: gray;
+    margin: -10px;
+    margin-left: 15px;
+    font-size: .8vw;
+}
+
+.blog.nature{
+    background-color: rgb(200, 255, 200);
+}
+.blog.tech{
+    background-color: rgb(254, 255, 200);
+}
+.blog.modern{
+    background-color: rgb(220, 220, 255);
+}
+
+.blog .hide{
+    display: none;
+}
+
+.fullblog{
+    width: 98%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-4);
+}   
+
+.fullblog img{
+    margin: 10px;
+    width: 70%;
+    border-radius: 10px;
+    align-self: center;
+    border: 5px solid var(--color-3);
+    aspect-ratio: 16/9;
+}
+
+.fullblog h3{
+    margin: 10px;
+    font-size: 3vw;
+    align-self: start;
+    color: var(--color-1);
+}
+
+.fullblog span{
+    margin: 10px;
+}
+
+.fullblog p{
+    margin: 15px;
+    text-align: justify;
+    font-size: 1.5vw;
+}
+
+.fullblog a{
+    align-self: center;
+    margin: 10px;
+    padding: 10px 30px;
+    background-color: var(--color-1);
+    color: var(--color-4);
+    text-decoration: none;
+    font-size: 1.5vw;
+    border-radius: 10px;
+}
+
+.fullblog a:hover{
+    background-color: var(--color-3);
+    color: var(--color-2) ;
+}
+
+@media screen and (max-width: 768px) {
+    .blogs .blog{
+        flex-basis: calc(50% - 20px);
+    }     
+}
+@media screen and (max-width: 480px) {
+    .blogs .blog{
+        flex-basis: calc(100% - 20px);
+    } 
+    
+}

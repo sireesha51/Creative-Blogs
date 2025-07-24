@@ -1,0 +1,91 @@
+.container h1{
+    font-size: 2.5vw;
+    padding: 20px;
+    color: var(--color-2);
+}
+
+.events{
+    margin: auto;
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: start;
+    scroll-behavior: smooth;
+}
+
+.events .eventcard{
+    width: calc(50% - 20px);
+    margin: 10px;
+    height: auto;
+    background-color: var(--color-4);
+    border: 1px solid var(--color-3);
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99,.2) 0px 2px 8px;
+    padding: 20px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+.eventcard h3{
+    font-size: 1.5vw;
+    padding: 0 10px;
+    color: var(--color-1);
+}
+
+.eventcard span{
+    font-size: 1vw;
+    margin: 5px;
+    text-align: justify;
+}
+
+.eventcard p, .eventcard a{
+    padding: 5px 10px;
+}
+
+/* mini scrollbar for events */
+.events::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.events::-webkit-scrollbar-thumb {
+    background: var(--color-3);
+    border-radius: 5px;
+}
+
+.events::-webkit-scrollbar-thumb:hover {
+    background: var(--color-2);
+}
+
+.events::-webkit-scrollbar-track {
+    background: var(--color-4);
+}
+
+.news{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news .newscard{
+    margin: 10px;
+    height: auto;
+    background-color: var(--color-4);
+    border: 1px solid var(--color-3);
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99,.2) 0px 2px 8px;
+    padding: 10px;
+}
+
+.newscard h3{
+    padding: 0px 10px;
+    font-size: 1.8vw;
+    color: var(--color-1);
+}
+
+.newscard p, .newscard a{
+    padding: 10px 20px;
+    text-align: justify;
+}
